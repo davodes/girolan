@@ -1,0 +1,275 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+
+const testimonials = [
+  {
+    name: "María González",
+    company: "Hotel Gran Vía",
+    role: "Directora de Mantenimiento",
+    content: "Excelente trabajo en la renovación completa del sistema de climatización. El equipo de Girolan fue muy profesional y cumplió todos los plazos establecidos.",
+    rating: 5,
+    image: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg"
+  },
+  {
+    name: "Carlos Ruiz",
+    company: "Laboratorios Farmacéuticos SL",
+    role: "Responsable Técnico",
+    content: "La instalación de la cámara frigorífica superó nuestras expectativas. Control preciso de temperatura y sistema de monitorización excepcional.",
+    rating: 5,
+    image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg"
+  },
+  {
+    name: "Ana Martínez",
+    company: "Vivienda Unifamiliar",
+    role: "Propietaria",
+    content: "Estamos encantados con nuestro nuevo sistema de aerotermia. Hemos reducido la factura energética a la mitad y el confort es excepcional.",
+    rating: 5,
+    image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg"
+  },
+  {
+    name: "Roberto Sánchez",
+    company: "Restaurante El Parador",
+    role: "Gerente",
+    content: "El sistema de ventilación de la cocina funciona perfectamente. Personal muy cualificado y servicio post-venta excelente.",
+    rating: 5,
+    image: "https://images.pexels.com/photos/937481/pexels-photo-937481.jpeg"
+  },
+  {
+    name: "Laura Fernández",
+    company: "Oficinas Centrales ABC",
+    role: "Facility Manager",
+    content: "Instalación de sistema VRF impecable. Control individual por despachos y ahorro energético significativo. Muy recomendable.",
+    rating: 5,
+    image: "https://images.pexels.com/photos/428364/pexels-photo-428364.jpeg"
+  },
+  {
+    name: "Miguel Torres",
+    company: "Centro Comercial Norte",
+    role: "Director Técnico",
+    content: "Proyecto complejo ejecutado con total profesionalidad. Sistema de climatización centralizada funcionando a la perfección desde hace 3 años.",
+    rating: 5,
+    image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg"
+  }
+];
+
+const clients = [
+  "Hotel Majestic", "Laboratorios Farmacéuticos SL", "Centro Comercial Plaza Norte",
+  "Restaurante El Parador", "Oficinas ABC", "Hospital San Rafael", 
+  "Universidad Complutense", "Supermercados Frescos", "Clínica Dental Sonrisa",
+  "Gimnasio Fitness Plus", "Colegio Santa María", "Residencia Geriátrica Los Olivos"
+];
+---
+
+<Layout 
+  title="Testimonios de Clientes | Opiniones Reales Girolan"
+  description="Descubre lo que opinan nuestros clientes sobre nuestros servicios de climatización. Testimonios reales de proyectos de aire acondicionado, calefacción y ventilación en Madrid."
+>
+  <Hero 
+    title="Nuestros Clientes Opinan"
+    subtitle="Testimonios reales"
+    description="La satisfacción de nuestros clientes es nuestro mejor aval. Descubre las experiencias reales de quienes han confiado en nosotros para sus proyectos de climatización."
+    image="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg"
+    showCTA={false}
+  />
+
+  <!-- Testimonials Section -->
+  <section class="py-20 bg-white">
+    <div class="container-width section-padding">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+          Testimonios de Clientes
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Más de 20 años de experiencia nos avalan. Lee las opiniones reales de nuestros clientes 
+          y descubre por qué somos la opción preferida en climatización.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {testimonials.map((testimonial) => (
+          <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100">
+            <!-- Rating -->
+            <div class="flex items-center mb-6">
+              {Array.from({length: testimonial.rating}).map(() => (
+                <svg class="w-5 h-5 text-yellow-400 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                </svg>
+              ))}
+            </div>
+
+            <!-- Content -->
+            <blockquote class="text-gray-600 mb-6 leading-relaxed text-lg">
+              "{testimonial.content}"
+            </blockquote>
+
+            <!-- Author -->
+            <div class="flex items-center">
+              <img 
+                src={testimonial.image} 
+                alt={testimonial.name}
+                class="w-12 h-12 rounded-full object-cover mr-4"
+                loading="lazy"
+              />
+              <div>
+                <h4 class="font-semibold text-gray-900">{testimonial.name}</h4>
+                <p class="text-sm text-gray-600">{testimonial.role}</p>
+                <p class="text-sm text-primary-600 font-medium">{testimonial.company}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-20 bg-primary-600 text-white">
+    <div class="container-width section-padding">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold mb-6">
+          Números que nos avalan
+        </h2>
+        <p class="text-xl opacity-90 max-w-2xl mx-auto">
+          Más de dos décadas de experiencia respaldada por la confianza de nuestros clientes.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-4xl lg:text-5xl font-bold mb-2">98%</div>
+          <div class="text-lg opacity-90">Satisfacción del cliente</div>
+        </div>
+        
+        <div>
+          <div class="text-4xl lg:text-5xl font-bold mb-2">500+</div>
+          <div class="text-lg opacity-90">Proyectos completados</div>
+        </div>
+        
+        <div>
+          <div class="text-4xl lg:text-5xl font-bold mb-2">95%</div>
+          <div class="text-lg opacity-90">Clientes que repiten</div>
+        </div>
+        
+        <div>
+          <div class="text-4xl lg:text-5xl font-bold mb-2">24h</div>
+          <div class="text-lg opacity-90">Tiempo de respuesta</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clients List -->
+  <section class="py-20 bg-gray-50">
+    <div class="container-width section-padding">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+          Confían en Nosotros
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Una amplia cartera de clientes satisfechos en diversos sectores: hostelería, 
+          sanidad, educación, industria y residencial.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {clients.map((client) => (
+          <div class="bg-white rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-shadow">
+            <h3 class="font-semibold text-gray-900">{client}</h3>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Guarantee Section -->
+  <section class="py-20 bg-white">
+    <div class="container-width section-padding">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">
+            Nuestra Garantía de Satisfacción
+          </h2>
+          <p class="text-lg text-gray-600 mb-6">
+            Nos comprometemos con la excelencia en cada proyecto. Nuestra garantía no solo 
+            cubre los equipos e instalaciones, sino también tu total satisfacción.
+          </p>
+          
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 bg-secondary-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-4 h-4 text-secondary-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Garantía extendida hasta 5 años</h3>
+                <p class="text-gray-600">En equipos e instalación según el tipo de proyecto.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 bg-secondary-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-4 h-4 text-secondary-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Servicio técnico 24/7</h3>
+                <p class="text-gray-600">Atención inmediata para emergencias y mantenimiento.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 bg-secondary-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-4 h-4 text-secondary-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Compromiso de calidad</h3>
+                <p class="text-gray-600">Si no estás satisfecho, lo solucionamos sin coste adicional.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <img 
+            src="https://images.pexels.com/photos/5691617/pexels-photo-5691617.jpeg" 
+            alt="Cliente satisfecho con instalación de climatización"
+            class="rounded-2xl shadow-2xl"
+            loading="lazy"
+          />
+          <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-lg">
+            <div class="text-center">
+              <div class="text-3xl font-bold text-primary-600">5★</div>
+              <div class="text-sm text-gray-600">Valoración media</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-secondary-600 text-white">
+    <div class="container-width section-padding text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold mb-6">
+        Únete a nuestros clientes satisfechos
+      </h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+        Más de 500 clientes han confiado en nosotros. ¿Serás el próximo en disfrutar 
+        de un servicio excepcional de climatización?
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contacto" class="bg-white text-secondary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+          Solicitar Presupuesto
+        </a>
+        <a href="tel:+34XXXXXXXXX" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-secondary-600 transition-colors">
+          Llamar Ahora
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

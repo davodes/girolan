@@ -1,0 +1,68 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  description: string;
+  image?: string;
+  showCTA?: boolean;
+}
+
+const { title, subtitle, description, image = "https://images.pexels.com/photos/2539462/pexels-photo-2539462.jpeg", showCTA = true } = Astro.props;
+---
+
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-50 via-white to-secondary-50">
+  <!-- Background Image -->
+  <!-- <div class="absolute inset-0 z-0">
+    <img 
+      src={image} 
+      alt="Girolan climatización profesional"
+      class="w-full h-full object-cover opacity-10"
+      loading="eager"
+      decoding="async"
+    />
+  </div> -->
+  
+  <!-- Animated Background Elements -->
+  <div class="absolute inset-0 z-10">
+    <div class="absolute top-20 left-10 w-72 h-72 bg-primary-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-float"></div>
+    <div class="absolute top-40 right-20 w-72 h-72 bg-secondary-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-float" style="animation-delay: 2s;"></div>
+    <div class="absolute -bottom-8 left-20 w-72 h-72 bg-accent-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-float" style="animation-delay: 4s;"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-20 text-center section-padding container-width">
+    <div class="max-w-4xl mx-auto">
+      {subtitle && (
+        <p class="text-primary-600 font-semibold text-lg mb-4 animate-fade-in">
+          {subtitle}
+        </p>
+      )}
+      
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-6 leading-tight animate-slide-up">
+        {title}
+      </h1>
+      
+      <p class="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed animate-slide-up" style="animation-delay: 0.2s;">
+        {description}
+      </p>
+      
+      {showCTA && (
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up" style="animation-delay: 0.4s;">
+          <a href="/contacto" class="btn-primary text-lg px-8 py-4 shadow-lg hover:shadow-xl">
+            Solicitar presupuesto
+          </a>
+          <a href="/proyectos" class="btn-secondary text-lg px-8 py-4">
+            Ver proyectos
+          </a>
+        </div>
+      )}
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+    <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+    </svg>
+  </div>
+</section>

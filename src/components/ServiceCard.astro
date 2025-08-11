@@ -1,0 +1,55 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  icon: string;
+  link: string;
+  features?: string[];
+}
+
+const { title, description, icon, link, features = [] } = Astro.props;
+---
+
+<div class="group relative bg-white rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-primary-200">
+  <!-- Icon -->
+  <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+    <div class="text-white" set:html={icon}></div>
+  </div>
+
+  <!-- Content -->
+  <h3 class="text-xl lg:text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary-600 transition-colors">
+    {title}
+  </h3>
+  
+  <p class="text-gray-600 mb-6 leading-relaxed">
+    {description}
+  </p>
+
+  <!-- Features -->
+  {features.length > 0 && (
+    <ul class="space-y-2 mb-6">
+      {features.map((feature) => (
+        <li class="flex items-center text-sm text-gray-600">
+          <svg class="w-4 h-4 text-primary-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+          </svg>
+          {feature}
+        </li>
+      ))}
+    </ul>
+  )}
+
+  <!-- CTA -->
+  <a 
+    href={link}
+    class="inline-flex items-center text-primary-600 font-semibold hover:text-primary-700 transition-colors group-hover:translate-x-1 transform duration-200"
+  >
+    Más información
+    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+    </svg>
+  </a>
+
+  <!-- Decorative element -->
+  <div class="absolute top-4 right-4 w-20 h-20 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-full opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+</div>
