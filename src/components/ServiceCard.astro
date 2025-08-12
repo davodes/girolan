@@ -2,18 +2,18 @@
 interface Props {
   title: string;
   description: string;
-  icon: string;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   link: string;
   features?: string[];
 }
 
-const { title, description, icon, link, features = [] } = Astro.props;
+const { title, description, icon: Icon, link, features = [] } = Astro.props;
 ---
 
 <div class="group relative bg-white rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-primary-200">
   <!-- Icon -->
-  <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300">
-    <div class="text-white" set:html={icon}></div>
+  <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-900 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+    <Icon className="w-8 h-8 text-white" />
   </div>
 
   <!-- Content -->
