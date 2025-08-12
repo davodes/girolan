@@ -1,0 +1,1 @@
+[![Preview](https://api.microlink.io/?url=https://girolan.vercel.app&screenshot=true&meta=false&embed=screenshot.url)](https://girolan.vercel.app)

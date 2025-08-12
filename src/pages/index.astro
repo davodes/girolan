@@ -4,7 +4,7 @@ import Hero from '../components/Hero.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import ContactForm from '../components/ContactForm';
 import GoogleMap from '../components/GoogleMap';
-import { AirVent, Heater, Fan, Snowflake } from 'lucide-react';
+import { AirVent, Heater, Wind, Snowflake } from 'lucide-react';
 
 const services = [
   {
@@ -24,7 +24,7 @@ const services = [
   {
     title: "Sistemas de ventilación",
     description: "Sistemas de ventilación mecánica controlada para garantizar la calidad del aire interior y el confort en espacios residenciales y comerciales.",
-    icon: Fan,
+    icon: Wind,
     link: "/ventilacion",
     features: ["VMC doble flujo", "Recuperadores de calor", "Extracción localizada", "Filtración avanzada"]
   },
@@ -51,7 +51,7 @@ const services = [
   />
 
   <!-- Services Section -->
-  <section class="py-20 bg-gray-50">
+  <section>
     <div class="container-width section-padding">
       <div class="text-center mb-16">
         <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
@@ -156,7 +156,7 @@ const services = [
   </section>
 
   <!-- Contact Section -->
-  <section class="py-20 bg-gray-50">
+  <section class="py-20">
     <div class="container-width section-padding">
       <div class="text-center mb-16">
         <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
