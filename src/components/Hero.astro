@@ -10,17 +10,8 @@ interface Props {
 const { title, subtitle, description, image = "https://images.pexels.com/photos/2539462/pexels-photo-2539462.jpeg", showCTA = true } = Astro.props;
 ---
 
-<section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-950 to-primary-700">
-  <!-- Background Image -->
-  <!-- <div class="absolute inset-0 z-0">
-    <img 
-      src={image} 
-      alt="Girolan climatización profesional"
-      class="w-full h-full object-cover opacity-10"
-      loading="eager"
-      decoding="async"
-    />
-  </div> -->
+<section class="relative min-h-[80vh] pt-12 flex items-center justify-center overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-blue-950 to-primary-700"></div>
   
   <!-- Animated Background Elements -->
   <div class="absolute inset-0 z-10">
@@ -29,7 +20,7 @@ const { title, subtitle, description, image = "https://images.pexels.com/photos/
   </div>
 
   <!-- Content -->
-  <div class="relative z-20 text-center section-padding container-width">
+  <div class="relative z-10 container-max text-center text-white section-padding">
     <div class="max-w-4xl mx-auto">
       {subtitle && (
         <p class="text-white font-semibold text-lg mb-4 animate-fade-in">
@@ -50,7 +41,7 @@ const { title, subtitle, description, image = "https://images.pexels.com/photos/
           <a href="/contacto" class="btn-primary text-lg px-8 py-4 shadow-lg hover:shadow-xl rounded-full">
             Solicitar presupuesto
           </a>
-          <a href="/proyectos" class="btn-secondary text-lg px-8 py-4 rounded-full">
+          <a href="/proyectos" class="btn-secondary text-lg px-8 py-4 rounded-full bg-transparent border-none text-white">
             Ver proyectos
           </a>
         </div>
