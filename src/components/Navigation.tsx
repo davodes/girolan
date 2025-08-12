@@ -46,9 +46,9 @@ const Navigation: React.FC = () => {
         
         {/* Contact Info */}
         <div className="flex items-center space-x-4 ml-8 pl-8 border-l border-gray-200">
-          <a href="tel:+34XXXXXXXXX" className="flex items-center text-sm text-gray-700 hover:text-primary-600 transition-colors">
+          <a href="tel:943458503" className="flex items-center text-sm text-gray-700 hover:text-primary-600 transition-colors">
             <Phone className="w-4 h-4 mr-1" />
-            <span className="hidden xl:inline">XXX XXX XXX</span>
+            <span className="hidden xl:inline">943 458 503</span>
           </a>
           <a href="mailto:info@girolan.net" className="flex items-center text-sm text-gray-700 hover:text-primary-600 transition-colors">
             <Mail className="w-4 h-4 mr-1" />
