@@ -2,11 +2,11 @@
 // import { Icon } from 'astro-icon/components';
 ---
 
-<header class="fixed top-0 w-full z-50 transition-all duration-300" id="header">
+<header class="fixed top-0 w-full z-50 transition-all duration-300">
   
   <nav class="thenav fixed container-max w-full m-0">
 
-    <div class="internav fixed backdrop-blur-xs bg-white/[var(--bg-opacity)] [--bg-opacity:95%] backdrop-blur-md border-b border-black/5 overflow-visible z-[99999] header-animate w-full">
+    <div id="header" class="internav fixed backdrop-blur-xs bg-white/[var(--bg-opacity)] [--bg-opacity:50%] backdrop-blur-md border-b border-black/5 overflow-visible z-[99999] header-animate w-full">
 
       <div class="flex flex-col items-center justify-between content-between grid-cols-[auto_1fr] m-auto gap-x-10 md:flex w-full">
         <div class="topheader flex justify-between bg-primary-700 w-full py-2 text-white text-sm">
@@ -64,10 +64,13 @@
             <svg class="bg-primary-500 w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg> Llamar ahora
           </a>
         </div> -->
-
+        <!-- Mobile Header -->
+        <div class="flex items-center justify-between w-full md:hidden pt-4 pb-3">
+          <!-- Logo -->
+          <a href="/" class="font-[Epilogue] font-bold text-2xl text-primary-700 flex w-max">Girolan SL</a>
         <!-- Mobile menu button -->
-        <div class="md:hidden">
-          <button type="button" class="mobile-menu-button text-white hover:text-primary-500 transition-colors" aria-label="Abrir menú de navegación">
+        <!-- <div class="md:hidden"> -->
+          <button type="button" class="pb-2 mobile-menu-button text-primary-700 hover:text-primary-500 transition-colors" aria-label="Abrir menú de navegación">
             <!-- Ícono hamburguesa -->
             <svg class="icon-burger h-6 w-6 block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -84,7 +87,7 @@
     <!-- Mobile Navigation -->
     <div class="mobile-menu hidden md:hidden w-full">
       <div class="flex flex-col gap-3 pt-20 pl-8 pr-4 pb-8 space-y-1 bg-black/[var(--bg-opacity)] [--bg-opacity:10%] backdrop-blur-md rounded-lg mt-2 w-full h-screen">
-        <a href="/aire-acondicionado" class="mobile-nav-link">Aire Acondicionado</a>
+        <a href="/aire-acondicionado" class="mobile-nav-link">Aire acondicionado</a>
         <a href="/servicios" class="mobile-nav-link">Servicios</a>
         <a href="/sobre-nosotros" class="mobile-nav-link">Sobre nosotros</a>
         <a href="/ubicacion" class="mobile-nav-link">Ubicación</a>
@@ -100,6 +103,9 @@
 </header>
 
 <style>
+  #header.over-hero {
+    --bg-opacity: 100%;
+  }
   .lucide {
     width: 20px;
   }
@@ -195,4 +201,27 @@
   //     mobileMenu?.classList.add('hidden');
   //   }
   // });
+  document.addEventListener('DOMContentLoaded', () => {
+    const header = document.getElementById('header');
+    const hero = document.getElementById('hero');
+
+    if (header && hero) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Header está sobre el hero → fondo 100%
+            header.classList.add('over-hero');
+          } else {
+            // Header ya no está sobre el hero → usar transparencia
+            header.classList.remove('over-hero');
+          }
+        });
+      }, {
+        rootMargin: `-${header.offsetHeight}px 0px 0px 0px`,
+        threshold: 0
+      });
+
+      observer.observe(hero);
+    }
+  });
 </script>
