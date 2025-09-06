@@ -2,11 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import ServiceCard from '../components/ServiceCard.astro';
-import { AirVent, Heater, Wind, Snowflake } from 'lucide-react';
+import { Heater, Footprints, Sprout, Sparkles, ShieldCheck, BadgeCheck } from 'lucide-react';
 
 const heatingSolutions = [
   {
-    title: "Calderas de condensación",
+    title: "Calderas condensación",
     description: "Calderas de alta eficiencia que aprovechan el calor de los gases de combustión para máximo rendimiento.",
     icon: Heater,
     link: "/contacto",
@@ -15,14 +15,14 @@ const heatingSolutions = [
   {
     title: "Suelo radiante",
     description: "Sistema de calefacción invisible que distribuye el calor de forma uniforme desde el suelo.",
-    icon: Heater,
+    icon: Footprints,
     link: "/contacto",
     features: ["Confort superior", "Ahorro energético", "Compatible con aerotermia", "Sin elementos visibles"]
   },
   {
     title: "Aerotermia",
     description: "Sistemas de bomba de calor aire-agua que extraen energía del aire exterior para calefacción y ACS.",
-    icon: Heater,
+    icon: Sprout,
     link: "/contacto",
     features: ["Energía renovable", "Altísima eficiencia", "Refrigeración en verano", "Subvenciones disponibles"]
   }
@@ -30,23 +30,23 @@ const heatingSolutions = [
 ---
 
 <Layout 
-  title="Calefacción Madrid | Calderas, Suelo Radiante, Aerotermia | Girolan"
-  description="Sistemas de calefacción en Madrid. Calderas de condensación, suelo radiante y aerotermia. Instalación profesional y mantenimiento garantizado."
+  title="Calefacción en Gipuzkoa | Calderas, Suelo Radiante, Aerotermia | Girolan"
+  description="Sistemas de calefacción en Gipuzkoa. Calderas de condensación, suelo radiante y aerotermia. Instalación profesional y mantenimiento garantizado."
 >
   <Hero 
     title="Sistemas de calefacción"
     subtitle="Confort térmico todo el año"
     description="Instalación y mantenimiento de sistemas de calefacción eficientes. Calderas, suelo radiante, aerotermia y radiadores para el máximo confort en tu hogar o negocio."
-    image="https://images.pexels.com/photos/6195125/pexels-photo-6195125.jpeg"
+    class="hero-extra"
   />
 
   <!-- Service Details -->
   <section class="py-20 bg-white">
-    <div class="container-width section-padding">
+    <div class="container-width section-padding py-0">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
         <div class="relative">
           <img 
-            src="https://images.pexels.com/photos/7031407/pexels-photo-7031407.jpeg" 
+            src="https://images.pexels.com/photos/707680/pexels-photo-707680.jpeg" 
             alt="Sistema de calefacción profesional"
             class="rounded-2xl shadow-2xl"
             loading="lazy"
@@ -58,8 +58,7 @@ const heatingSolutions = [
             Calefacción eficiente y sostenible
           </h2>
           <p class="text-lg text-gray-600 mb-6">
-            Especialistas en sistemas de calefacción modernos y eficientes. Desde calderas de 
-            condensación hasta aerotermia, ofrecemos las soluciones más avanzadas del mercado.
+            Desde calderas de condensación hasta aerotermia, ofrecemos las soluciones más avanzadas del mercado.
           </p>
           <p class="text-lg text-gray-600 mb-8">
             Nuestros sistemas garantizan el máximo confort con el mínimo consumo energético, 
@@ -68,19 +67,19 @@ const heatingSolutions = [
           
           <div class="space-y-4">
             <div class="flex items-center space-x-3">
-              <svg class="w-6 h-6 text-secondary-600" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-6 h-6 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
               </svg>
               <span class="text-lg text-gray-700">Certificación energética mejorada</span>
             </div>
             <div class="flex items-center space-x-3">
-              <svg class="w-6 h-6 text-secondary-600" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-6 h-6 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
               </svg>
               <span class="text-lg text-gray-700">Reducción de hasta 60% en consumo</span>
             </div>
             <div class="flex items-center space-x-3">
-              <svg class="w-6 h-6 text-secondary-600" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-6 h-6 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
               </svg>
               <span class="text-lg text-gray-700">Acceso a subvenciones y ayudas</span>
@@ -92,7 +91,7 @@ const heatingSolutions = [
       <!-- Solutions -->
       <div class="mb-16">
         <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-12">
-          Soluciones de Calefacción
+          Soluciones de calefacción
         </h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -109,34 +108,28 @@ const heatingSolutions = [
       </div>
 
       <!-- Benefits Section -->
-      <div class="bg-secondary-50 rounded-2xl p-12">
+      <div class="bg-primary-50 rounded-2xl p-12">
         <h3 class="text-2xl font-bold text-gray-900 text-center mb-12">Ventajas de nuestros sistemas</h3>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="text-center">
-            <div class="w-16 h-16 bg-secondary-200 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-secondary-700" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2l3.09 6.26L22 9l-5 4.87L18.18 22 12 18.77 5.82 22 7 13.87 2 9l6.91-.74L12 2z"/>
-              </svg>
+            <div class="w-16 h-16 bg-primary-200 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Sparkles className="h-16" />
             </div>
-            <h4 class="text-lg font-semibold text-gray-900 mb-2">Máxima Eficiencia</h4>
+            <h4 class="text-lg font-semibold text-gray-900 mb-2">Máxima eficiencia</h4>
             <p class="text-gray-600">Tecnología de vanguardia para el mínimo consumo energético</p>
           </div>
           
           <div class="text-center">
-            <div class="w-16 h-16 bg-secondary-200 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-secondary-700" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-              </svg>
+            <div class="w-16 h-16 bg-primary-200 rounded-full flex items-center justify-center mx-auto mb-4">
+              <ShieldCheck className="h-16" />
             </div>
-            <h4 class="text-lg font-semibold text-gray-900 mb-2">Instalación Certificada</h4>
+            <h4 class="text-lg font-semibold text-gray-900 mb-2">Instalación certificada</h4>
             <p class="text-gray-600">Técnicos cualificados y autorizados por fabricantes</p>
           </div>
           
           <div class="text-center">
-            <div class="w-16 h-16 bg-secondary-200 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-secondary-700" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2l3.09 6.26L22 9l-5 4.87L18.18 22 12 18.77 5.82 22 7 13.87 2 9l6.91-.74L12 2z"/>
-              </svg>
+            <div class="w-16 h-16 bg-primary-200 rounded-full flex items-center justify-center mx-auto mb-4">
+              <BadgeCheck className="h-16" />
             </div>
             <h4 class="text-lg font-semibold text-gray-900 mb-2">Garantía Extendida</h4>
             <p class="text-gray-600">Hasta 5 años de garantía en equipos e instalación</p>
@@ -147,23 +140,47 @@ const heatingSolutions = [
   </section>
 
   <!-- CTA Section -->
-  <section class="py-20 bg-secondary-600 text-white">
+  <section class="py-0 bg-gradient-to-br from-blue-950 to-primary-700 text-white">
     <div class="container-width section-padding text-center">
       <h2 class="text-3xl lg:text-4xl font-bold mb-6">
         Renueva tu sistema de calefacción
       </h2>
       <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-        Mejora el confort de tu hogar y reduce tu consumo energético. 
-        Consulta las subvenciones disponibles para tu nuevo sistema.
+        Mejora el confort de tu hogar y reduce tu consumo energético. Consulta las subvenciones disponibles para tu nuevo sistema.
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/contacto" class="bg-white text-secondary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-          Solicitar Estudio Gratuito
+      <div class="flex flex-col sm:flex-row gap-10 justify-center items-center">
+        <a href="/contacto" class="flex gap-2 btn-primary text-lg px-8 py-4 shadow-lg hover:shadow-xl rounded-full">
+          Solicitar estudio gratuito
         </a>
-        <a href="tel:+34XXXXXXXXX" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-secondary-600 transition-colors">
-          Llamar Ahora
+        <a href="tel:+943458503" class="nav-link btn-primary text-lg px-8 py-0 rounded-full bg-transparent border-none text-white hover:bg-transparent focus:outline-offset-0 focus:outline-none focus:ring-offset-0 focus:ring-0 shadow-none">
+          Llamar ahora
         </a>
       </div>
     </div>
   </section>
 </Layout>
+
+<style>
+.nav-link {
+  @apply hover:text-white flex items-center gap-2 px-1 py-2 transition-colors relative;
+}
+.nav-link:last-child {
+  height: max-content !important;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: theme('colors.white');
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+</style>

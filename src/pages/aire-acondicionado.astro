@@ -2,11 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import ServiceCard from '../components/ServiceCard.astro';
-import { AirVent, Heater, Wind, Snowflake } from 'lucide-react';
+import { AirVent, CircleDotDashed, Flame } from 'lucide-react';
 
 const airConditioningSolutions = [
   {
-    title: "Aire acondicionado split",
+    title: "Aire acondicionado",
     description: "Sistemas split individuales y multi-split para climatización zonal. Perfectos para viviendas y pequeñas oficinas.",
     icon: AirVent,
     link: "/contacto",
@@ -15,14 +15,14 @@ const airConditioningSolutions = [
   {
     title: "Aire central",
     description: "Sistemas de climatización centralizada para grandes espacios comerciales e industriales.",
-    icon: AirVent,
+    icon: CircleDotDashed,
     link: "/contacto",
     features: ["Climatización integral", "Control centralizado", "Distribución por conductos", "Mantenimiento programado"]
   },
   {
     title: "Bombas de calor",
     description: "Sistemas reversibles que proporcionan calefacción y refrigeración con máxima eficiencia energética.",
-    icon: AirVent,
+    icon: Flame,
     link: "/contacto",
     features: ["Aerotermia", "Geotermia", "Reversible", "Ahorro energético"]
   }
@@ -30,27 +30,28 @@ const airConditioningSolutions = [
 ---
 
 <Layout 
-  title="Aire acondicionado Madrid | Instalación y mantenimiento | Girolan"
-  description="Instalación y mantenimiento de aire acondicionado en Madrid. Sistemas split, aire central y bombas de calor. Técnicos certificados y garantía extendida."
+  title="Aire acondicionado en Gipuzkoa | Instalación y mantenimiento | Girolan"
+  description="Instalación y mantenimiento de aire acondicionado en Gipuzkoa. Sistemas split, aire central y bombas de calor. Técnicos certificados y garantía extendida."
 >
   <Hero 
     title="Aire acondicionado profesional"
     subtitle="Sistemas de climatización eficientes"
     description="Instalación, mantenimiento y reparación de sistemas de aire acondicionado. Tecnología de última generación para tu máximo confort durante todo el año."
     image="https://images.pexels.com/photos/8985018/pexels-photo-8985018.jpeg"
+    class="hero-extra"
   />
 
   <!-- Service Details -->
   <section class="py-20 bg-white">
-    <div class="container-width section-padding">
+    <div class="container-width section-padding pt-0 pb-0">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
         <div>
           <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">
             Expertos en aire acondicionado
           </h2>
           <p class="text-lg text-gray-600 mb-6">
-            Con más de 20 años de experiencia, somos especialistas en la instalación y mantenimiento 
-            de sistemas de aire acondicionado para hogares, oficinas y espacios comerciales en Madrid.
+            Con más de 35 años de experiencia, somos especialistas en la instalación y mantenimiento 
+            de sistemas de aire acondicionado para hogares, oficinas y espacios comerciales en Gipuzkoa.
           </p>
           <p class="text-lg text-gray-600 mb-8">
             Trabajamos con las mejores marcas del mercado y ofrecemos soluciones personalizadas 
@@ -82,7 +83,7 @@ const airConditioningSolutions = [
       <!-- Solutions -->
       <div class="mb-16">
         <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-12">
-          Nuestras Soluciones
+          Nuestras soluciones
         </h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -99,20 +100,95 @@ const airConditioningSolutions = [
       </div>
 
       <!-- Brands Section -->
-      <div class="bg-gray-50 rounded-2xl p-12 text-center">
-        <h3 class="text-2xl font-bold text-gray-900 mb-8">Trabajamos con las mejores marcas</h3>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-60">
-          <div class="text-xl font-semibold text-gray-700">Mitsubishi</div>
-          <div class="text-xl font-semibold text-gray-700">Daikin</div>
-          <div class="text-xl font-semibold text-gray-700">LG</div>
-          <div class="text-xl font-semibold text-gray-700">Samsung</div>
+      <div class="bg-gray-50 rounded-2xl p-16 text-center">
+        <h3 class="text-2xl font-bold text-gray-900 mb-10">Trabajamos con las mejores marcas</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-90">
+          <div class="text-xl font-semibold text-gray-700 flex justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" height="65" version="1.0" viewBox="0 0 794 242"><g fill="#f00">
+              <path d="M94.19 233.04H7.09l43.43-75.31h87.1"/>
+              <path d="M181.05 233.04h86.87l-43.43-75.31h-86.87"/>
+              <path d="M181.05 82.4 137.62 7.09l-43.43 75.3 43.43 75.34"/>
+              </g>
+              <path d="M307 200.96h34.93v-12.6h-34.94v-15.55h39.3v-12.64h-54v72.87h54.92V220.4h-40.22"/>
+              <path d="m306.07 93.86 15.4 54.17h14.25l15.4-54.17v54.17h13.79V75.18h-21.15l-15.16 51.13-15.17-51.13h-21.15v72.85h13.8"/>
+              <path d="M626.66 148.03h14.71V75.18h-14.7v72.85z"/>
+              <path d="M638.61 233.04h14.71v-72.87h-14.7v72.87z"/>
+              <path d="M771.9 148.03h14.71V75.18h-14.7v72.85z"/>
+              <path d="M370.65 148.03h14.7V75.18h-14.7v72.85z"/>
+              <path d="M751.45 103.59h-29.18V75.18h-14.48v72.85h14.48V116.2h29.18v31.83h14.25V75.18h-14.25"/>
+              <path d="M407.2 148.03h14.93V87.77h17.7V75.18h-50.56v12.6h17.92"/>
+              <path d="M540.94 233.04h14.94v-60.23h17.93v-12.64h-50.56v12.64h17.7"/>
+              <path d="M531.06 150.05c18.62 0 28.96-8.5 28.96-24.8V75.19h-14.7v51.43c0 6.28-5.3 11.5-14.26 11.5-11.26 0-14.48-6.19-14.48-11.5V75.18h-14.25v50.08c0 17.53 10.8 24.8 28.73 24.8"/>
+              <path d="M420.06 200.96h34.7v-12.6h-34.7v-15.55h39.07v-12.64h-53.78v72.87h54.93V220.4h-40.22"/>
+              <path d="M598.17 86.74c3.9 0 8.5 3.72 8.5 8.62a9.1 9.1 0 0 1-9.42 9.19h-17.47V86.74h18.39zM597.02 137h-17.24v-21.12h17c6.21 0 11.27 3.52 11.27 10.6 0 5.97-4.6 10.52-11.03 10.52m-16.78 11.03h21.15c13.78 0 21.83-8.2 21.83-19.7 0-9.25-6.67-17.2-14.02-19.05 6.43-1.6 11.49-8.15 11.49-16.2 0-10.73-7.81-17.9-22.52-17.9H565.3v72.85"/>
+              <path d="M592.2 192.52V172.7h17.69c5.97 0 9.88 4.2 9.88 9.95 0 4.07-3.45 9.88-9.42 9.88h-18.16zm29.18 5.54c6.2-1.88 12.87-7.5 12.87-17.6 0-12.96-8.74-20.39-23.67-20.39h-33.33v72.85h14.94v-28.7h12.41c7.59 0 11.72 3.93 12.87 9.12 1.38 5.73 1.15 14.25 2.53 19.58h14.94c-1.38-5.58-2.3-13.16-2.76-19.14-.46-9.86-5.75-13.81-10.8-15.72"/>
+              <path d="M366.74 160.17h-14.7v72.87h48.95V220.4h-34.25"/>
+              <path d="M464.65 117.24c11.72 2.04 18.38 4.25 18.38 11.3 0 4.76-4.6 9.31-14.48 9.31s-14.94-5.56-14.94-12.2H439.6c0 12.68 8.28 24.24 29.65 24.24 20.22 0 29.19-10.77 29.19-23.07 0-11.5-7.59-18.78-20.92-21.44-13.1-2.53-21.83-3.06-21.83-11.26 0-5.63 5.06-8.99 13.1-8.99 8.27 0 13.1 4.16 13.1 11.15h14.25c0-11.5-8.73-23.33-28.04-23.33-13.33 0-27.12 7.7-27.12 22.1 0 12.1 8.74 19.59 23.68 22.19"/>
+              <path d="M669.87 117.24c11.95 2.04 18.61 4.25 18.61 11.3 0 4.76-4.82 9.31-14.47 9.31-9.89 0-14.94-5.56-14.94-12.2h-14.02c0 12.68 8.04 24.24 29.65 24.24 20.22 0 29.18-10.77 29.18-23.07 0-11.5-7.58-18.78-21.14-21.44-12.87-2.53-21.83-3.06-21.83-11.26 0-5.63 5.28-8.99 13.1-8.99 8.5 0 13.32 4.16 13.32 11.15h14.25c0-11.5-8.73-23.33-28.03-23.33-13.33 0-27.35 7.7-27.35 22.1 0 12.1 8.96 19.59 23.67 22.19"/>
+              <path d="M493.37 221.78c-11.72 0-18.61-11.63-18.61-25.49 0-13.86 6.66-25.48 18.61-25.48 9.2 0 13.8 5.58 15.63 12.45h15.4c-2.53-14.27-13.56-24.84-31.26-24.84-22.29 0-33.78 17.05-33.78 38.06 0 21.07 11.95 38.12 33.78 38.12 17.47 0 29.19-10.15 31.26-25.74H509c-1.84 7.33-6.67 12.92-15.63 12.92"/>
+              <path d="M691.01 221.78c-11.95 0-18.84-11.63-18.84-25.49 0-13.86 6.66-25.48 18.84-25.48 8.96 0 13.56 5.58 15.63 12.45h15.17c-2.53-14.27-13.56-24.84-31.26-24.84-22.29 0-33.55 17.05-33.55 38.06 0 21.07 11.72 38.12 33.55 38.12 17.47 0 29.19-10.15 31.49-25.74h-15.4c-2.07 7.33-6.9 12.92-15.63 12.92"/>
+            </svg></div>
+          <div class="text-xl font-semibold text-gray-700 flex justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" height="50" version="1.0" id="svg53084" viewBox="0 0 300 64.616861">
+            <defs id="defs53086"/>
+            <metadata id="metadata53089">
+              <rdf:RDF>
+                <cc:Work rdf:about="">
+                  <dc:format>image/svg+xml</dc:format>
+                  <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+                  <dc:title/>
+                </cc:Work>
+              </rdf:RDF>
+            </metadata>
+            <g transform="translate(-393.36411,-761.77017)" id="layer1">
+              <g transform="matrix(1.812145,0,0,-1.812145,462.23619,762.77017)" id="g53028">
+                <path id="path53030" style="fill:#44c8f5;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 0,0 -37.453,0 0,-34.554 L 0,0"/>
+              </g>
+              <g transform="matrix(1.812145,0,0,-1.812145,428.29471,762.77017)" id="g53032">
+                <path id="path53034" style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 0,0 -18.724,0 0,-17.285 L 0,0"/>
+              </g>
+              <g transform="matrix(1.812145,0,0,-1.812145,557.00956,776.36126)" id="g53036">
+                <path id="path53038" style="fill:#00a0e4;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 0,0 -4.889,-19.547 8.638,0 L 8.634,0 0,0"/>
+              </g>
+              <g transform="matrix(1.812145,0,0,-1.812145,521.25957,796.89105)" id="g53040">
+                <path id="path53042" style="fill:#00a0e4;fill-opacity:1;fill-rule:nonzero;stroke:none" d="M 0,0 -1.981,0 1.213,5.639 2.249,0 0,0 Z m -1.229,11.331 -11.109,-19.546 5.713,0 1.844,3.258 7.931,0 0.591,-3.258 8.432,0 -3.584,19.546 -9.818,0"/>
+              </g>
+              <g transform="matrix(1.812145,0,0,-1.812145,628.49506,776.36126)" id="g53044">
+                <path id="path53046" style="fill:#00a0e4;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 0,0 -4.876,-19.547 8.636,0 L 8.637,0 0,0"/>
+              </g>
+              <g transform="matrix(1.812145,0,0,-1.812145,621.50018,776.36126)" id="g53048">
+                <path id="path53050" style="fill:#00a0e4;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 0,0 -8.851,0 -7.409,-6.394 1.617,6.394 -8.279,0 -4.876,-19.547 8.253,0 1.686,6.748 4.413,-6.748 9.99,0 L -10.855,-9.31 0,0"/>
+              </g>
+              <g transform="matrix(1.812145,0,0,-1.812145,486.6186,792.45854)" id="g53052">
+                <path id="path53054" style="fill:#00a0e4;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 0,0 c 0,0 -0.561,-6.349 -5.971,-6.349 l -3.061,0 2.696,10.543 2.778,0 C -2.564,4.188 0.313,3.93 0,0 Z m -0.438,8.874 -2.234,0.007 -10.808,0 -4.876,-19.539 10.732,0 4.246,-0.006 c 5.978,0 11.861,4.45 11.861,11.266 0,8.02 -8.921,8.272 -8.921,8.272"/>
+              </g>
+              <g transform="matrix(1.812145,0,0,-1.812145,681.52929,776.35582)" id="g53056">
+                <path id="path53058" style="fill:#00a0e4;fill-opacity:1;fill-rule:nonzero;stroke:none" d="M 0,0 -2.881,-11.51 -6.719,0 l -9.606,0 -4.88,-19.55 5.973,0 2.909,11.611 3.85,-11.611 9.565,0 L 5.979,0 0,0"/>
+              </g>
+            </g>
+          </svg>
+          </div>
+          <div class="text-xl font-semibold text-gray-700 flex justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 275" height="60" preserveAspectRatio="xMidYMid meet">
+              <path d="m523.76 156.45h31.071v28.903c-5.7021 2.1745-16.894 4.3498-27.504 4.3498-34.368 0-45.797-17.446-45.797-52.874 0-33.811 10.881-53.708 45.216-53.708 19.135 0 29.991 6.004 38.99 17.453l23.741-21.811c-14.497-20.672-39.8-26.937-63.557-26.937-53.413-0.02127-81.498 29.113-81.498 84.721 0 55.332 25.377 85.327 81.212 85.327 25.639 0 50.697-6.5259 64.343-16.09v-80.138h-66.216zm-162.98 30.804h79.071v32.166h-117.23v-165.17h38.162z" fill="#6b6c6b"/>
+              <path d="m228.04 227.83c49.881-49.881 49.878-130.76-0.00491-180.63-49.883-49.879-130.76-49.885-180.63-0.004909-49.881 49.88-49.878 130.76 0.004909 180.63 49.882 49.883 130.76 49.885 180.63 0.00573z" fill="#a50034"/>
+              <path d="m98.971 112.6c2.9124-0.0139 5.7553-0.8909 8.1703-2.5197 2.4142-1.628 4.2925-3.935 5.3969-6.6298 1.1052-2.6948 1.3867-5.6571 0.80991-8.5114-0.57757-2.8551-1.9871-5.4747-4.0512-7.5289-2.0649-2.0542-4.6918-3.4515-7.5493-4.0144-2.8568-0.56285-5.8174-0.2667-8.5065 0.85081-2.6899 1.1183-4.9879 3.0073-6.6044 5.4305-1.6165 2.4224-2.4788 5.2693-2.4788 8.1817 0.0041 1.9405 0.39105 3.8614 1.138 5.6522 0.74773 1.7916 1.8399 3.418 3.2151 4.7866 1.376 1.3687 3.0081 2.4534 4.8022 3.1914 1.7949 0.73873 3.7174 1.1159 5.6579 1.111zm135.1 28.96h-64.955v-9.6216h74.475c0.10145 1.8636 0.15217 3.7264 0.15217 5.6121 0 57.936-47.218 104.9-105.45 104.9-58.234 0-105.46-46.935-105.46-104.9 0-57.96 47.211-104.9 105.45-104.9 1.5372 0 3.067 0.03109 4.5895 0.09408v9.5496c-1.5225-0.0679-3.0474-0.10144-4.5756-0.10144-52.931 0-95.856 42.694-95.856 95.348 0 52.655 42.919 95.357 95.856 95.357 51.482 0 93.54-40.395 95.766-91.07zm-65.103 40.085h-26.104v-98.073h-9.651v107.76h9.6731v-0.0646h26.104z" fill="#fff"/>
+            </svg>
+          </div>
+          
+          <div class="text-xl font-semibold text-gray-700">
+            <svg xmlns="http://www.w3.org/2000/svg" height="65" viewBox="0 0 999.99999 332.02601"><metadata id="metadata34"><rdf:RDF><cc:Work rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/><dc:title/></cc:Work></rdf:RDF></metadata><defs id="defs32">
+            </defs><sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1366" inkscape:window-height="705" id="namedview30" showgrid="false" inkscape:zoom="0.70710678" inkscape:cx="466.89155" inkscape:cy="185.27065" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="svg2"/>
+            <g id="g8882" transform="translate(0,115.62801)"><path d="M 999.37988,-36.576795 C 1013.0024,41.489166 800.47976,143.72416 524.64523,191.76559 248.84366,239.80703 14.217322,215.42927 0.61675033,137.33035 -12.972835,59.253402 199.60476,-42.94863 475.40633,-90.979081 751.21889,-139.04249 985.80128,-114.66473 999.37988,-36.576795 Z" id="path10" inkscape:connector-curvature="0" style="fill:#034ea2"/><g id="g8872"><polygon points="67.34,17.745 67.211,10.356 69.541,10.356 69.541,19.669 66.191,19.669 63.866,12.026 63.816,12.026 63.945,19.669 61.63,19.669 61.63,10.356 65.125,10.356 67.288,17.745 " id="polygon16" style="fill:#ffffff" transform="matrix(10.985922,0,0,10.985922,0.0015387,-115.63149)"/><polygon points="24.987,11.228 23.698,19.767 21.157,19.767 22.902,10.356 27.088,10.356 28.825,19.767 26.294,19.767 25.04,11.228 " id="polygon18" style="fill:#ffffff" transform="matrix(10.985922,0,0,10.985922,0.0015387,-115.63149)"/><polygon points="34.743,19.767 33.169,11.306 33.118,11.306 33.059,19.767 30.702,19.767 30.91,10.356 34.75,10.356 35.912,17.55 35.962,17.55 37.125,10.356 40.963,10.356 41.167,19.767 38.815,19.767 38.753,11.306 38.704,11.306 37.131,19.767 " id="polygon20" style="fill:#ffffff" transform="matrix(10.985922,0,0,10.985922,0.0015387,-115.63149)"/><path d="m 188.89348,72.359607 c 1.01071,2.50479 0.7031,5.723666 0.23071,7.668174 -0.86789,3.438593 -3.19691,6.943103 -10.07409,6.943103 -6.4817,0 -10.41466,-3.713242 -10.41466,-9.392964 l 0,-10.008175 -27.72847,0 -0.022,8.008737 c 0,23.048465 18.14875,30.002558 37.59383,30.002558 18.69804,0 34.1003,-6.393811 36.55016,-23.619737 1.2524,-8.931554 0.31859,-14.776065 -0.10986,-16.984235 -4.36141,-21.642267 -43.60312,-28.101989 -46.52538,-40.208475 -0.49437,-2.076339 -0.35155,-4.273523 -0.10986,-5.449017 0.71409,-3.295777 2.97719,-6.932117 9.44789,-6.932117 6.04226,0 9.61269,3.735214 9.61269,9.381977 0,1.900565 0,6.382821 0,6.382821 l 25.78396,0 0,-7.261694 c 0,-22.5211404 -20.2141,-26.0366354 -34.85834,-26.0366354 -18.39043,0 -33.41917,6.07521482 -36.16565,22.9056474 -0.74704,4.647045 -0.8569,8.788738 0.2307,13.974093 4.51522,21.125928 41.24116,27.245086 46.55834,40.625939 z" id="path22" inkscape:connector-curvature="0" style="fill:#ffffff"/><path d="m 525.08467,72.172847 c 1.02169,2.482818 0.69211,5.613806 0.2307,7.558314 -0.84592,3.427608 -3.15296,6.877187 -9.9862,6.877187 -6.39381,0 -10.29381,-3.713242 -10.29381,-9.261132 l -0.022,-9.920288 -27.44284,0 -0.033,7.898878 c 0,22.81776 17.98395,29.705934 37.23129,29.705934 18.50029,0 33.75973,-6.30592 36.16565,-23.378043 1.2524,-8.865639 0.36254,-14.633248 -0.0879,-16.797474 -4.33944,-21.44452 -43.18566,-27.838327 -46.07495,-39.823968 -0.49437,-2.065353 -0.35155,-4.240566 -0.0989,-5.350144 0.73606,-3.317748 2.95522,-6.866201 9.36001,-6.866201 5.98733,0 9.48085,3.647326 9.48085,9.250146 0,1.878593 0,6.316905 0,6.316905 l 25.58621,0 0,-7.184792 c 0,-22.2794503 -20.04931,-25.7729735 -34.55072,-25.7729735 -18.1817,0 -33.0896,5.9983134 -35.78115,22.7079005 -0.74704,4.58113 -0.82394,8.645921 0.24169,13.809304 4.4493,20.90621 40.8127,26.981425 46.07496,40.230447 z" id="path24" inkscape:connector-curvature="0" style="fill:#ffffff"/><path d="m 611.92838,86.059052 c 7.17381,0 9.41494,-4.965637 9.9093,-7.503385 0.20873,-1.120564 0.26366,-2.614649 0.24169,-3.954932 l 0,-76.5059605 26.1465,0 0,74.1659595 c 0.0549,1.900564 -0.13183,5.811553 -0.21972,6.7893 -1.83465,19.302265 -17.0941,25.564236 -36.08876,25.564236 -19.01663,0 -34.28706,-6.261971 -36.09974,-25.564236 -0.0879,-0.977747 -0.27464,-4.888736 -0.21971,-6.7893 l 0,-74.1659595 26.12452,0 0,76.5059605 c 0,1.340283 0.0439,2.845354 0.24169,3.954932 0.56028,2.537748 2.73549,7.503385 9.96423,7.503385 z" id="path26" inkscape:connector-curvature="0" style="fill:#ffffff"/><path d="m 827.604,84.971446 c 7.4924,0 10.10705,-4.734933 10.59043,-7.492399 0.18676,-1.18648 0.24169,-2.625635 0.2307,-3.93296 l 0,-15.00677 -10.6124,0 0,-15.094656 36.66002,0 0,27.750439 c -0.022,1.933522 -0.0659,3.361692 -0.37352,6.811271 -1.72479,18.807899 -18.03888,25.520299 -36.3634,25.520299 -18.35747,0 -34.6496,-6.7124 -36.39636,-25.520299 -0.29662,-3.449579 -0.34056,-4.877749 -0.37352,-6.811271 l 0.022,-43.537209 c 0,-1.834649 0.23071,-5.086482 0.42845,-6.811272 2.29606,-19.3242368 17.96199,-25.5422686 36.31946,-25.5422686 18.33551,0 34.38594,6.185074 36.2865,25.5422686 0.34057,3.295777 0.23071,6.811272 0.23071,6.811272 l 0,3.449579 -26.0696,0 0,-5.789581 c 0.022,0.01099 -0.033,-2.460846 -0.34056,-3.93296 -0.43944,-2.285072 -2.42789,-7.536342 -10.30479,-7.536342 -7.53635,0 -9.74452,4.965636 -10.29381,7.536342 -0.3186,1.362255 -0.43944,3.207889 -0.43944,4.87775 l 0,47.283408 c -0.022,1.307325 0.0549,2.74648 0.26366,3.93296 0.45042,2.768452 3.05409,7.492399 10.5355,7.492399 z" id="path28" inkscape:connector-curvature="0" style="fill:#ffffff"/></g></g>
+            </svg>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section class="py-20 bg-primary-600 text-white">
+  <section class="py-0 bg-gradient-to-br from-blue-950 to-primary-700 text-white">
     <div class="container-width section-padding text-center">
       <h2 class="text-3xl lg:text-4xl font-bold mb-6">
         ¿Necesitas un sistema de aire acondicionado?
@@ -121,14 +197,39 @@ const airConditioningSolutions = [
         Solicita tu presupuesto gratuito y sin compromiso. Nuestros técnicos certificados 
         te asesorarán sobre la mejor solución para tu espacio.
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/contacto" class="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-          Solicitar Presupuesto
+      <div class="flex flex-col sm:flex-row gap-10 justify-center items-center">
+        <a href="/contacto" class="flex gap-2 btn-primary text-lg px-8 py-4 shadow-lg hover:shadow-xl rounded-full">
+          Solicitar presupuesto
         </a>
-        <a href="tel:+34XXXXXXXXX" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
-          Llamar Ahora
+        <a href="tel:+943458503" class="nav-link btn-secondary text-lg px-8 py-0 rounded-full bg-transparent border-none text-white hover:bg-transparent focus:outline-offset-0 focus:outline-none focus:ring-offset-0 focus:ring-0 shadow-none">
+          Llamar ahora
         </a>
       </div>
     </div>
   </section>
 </Layout>
+
+<style>
+.nav-link {
+  @apply hover:text-white flex items-center gap-2 px-1 py-2 transition-colors relative;
+}
+.nav-link:last-child {
+  height: max-content !important;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: theme('colors.white');
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+</style>

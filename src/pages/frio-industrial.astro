@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import ServiceCard from '../components/ServiceCard.astro';
-import { AirVent, Heater, Wind, Snowflake } from 'lucide-react';
+import { Snowflake, Building2, Factory, Beef, Pill, ChefHat, Warehouse, View, HousePlug, Activity } from 'lucide-react';
 
 const industrialSolutions = [
   {
@@ -15,14 +15,14 @@ const industrialSolutions = [
   {
     title: "Refrigeración comercial",
     description: "Equipos de refrigeración para supermercados, restaurantes, hoteles y centros de distribución.",
-    icon: Snowflake,
+    icon: Building2,
     link: "/contacto",
     features: ["Vitrinas refrigeradas", "Armarios conservación", "Sistemas centralizados", "Monitorización remota"]
   },
   {
     title: "Refrigeración industrial",
     description: "Sistemas de gran capacidad para procesos industriales, logística y almacenamiento a gran escala.",
-    icon: Snowflake,
+    icon: Factory,
     link: "/contacto",
     features: ["Alta capacidad", "Sistemas robustos", "Control preciso", "Mantenimiento especializado"]
   }
@@ -30,23 +30,23 @@ const industrialSolutions = [
 ---
 
 <Layout 
-  title="Frío Industrial Madrid | Cámaras Frigoríficas, Refrigeración | Girolan"
-  description="Especialistas en frío industrial en Madrid. Cámaras frigoríficas, refrigeración comercial e industrial. Diseño, instalación y mantenimiento especializado."
+  title="Frío industrial en Gipuzkoa | Cámaras frigoríficas, refrigeración | Girolan"
+  description="Especialistas en frío industrial en Gipuzkoa. Cámaras frigoríficas, refrigeración comercial e industrial. Diseño, instalación y mantenimiento especializado."
 >
   <Hero 
     title="Frío industrial"
     subtitle="Refrigeración profesional"
     description="Especialistas en sistemas de frío industrial para conservación de alimentos, farmacéuticos y procesos industriales. Soluciones robustas y eficientes para cualquier sector."
-    image="https://images.pexels.com/photos/7129160/pexels-photo-7129160.jpeg"
+    class="hero-extra"
   />
 
   <!-- Service Details -->
   <section class="py-20 bg-white">
-    <div class="container-width section-padding">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+    <div class="container-width section-padding py-0">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
         <div class="relative">
           <img 
-            src="https://images.pexels.com/photos/6249525/pexels-photo-6249525.jpeg" 
+            src="https://images.pexels.com/photos/5953713/pexels-photo-5953713.jpeg" 
             alt="Cámara frigorífica industrial"
             class="rounded-2xl shadow-2xl"
             loading="lazy"
@@ -61,7 +61,7 @@ const industrialSolutions = [
 
         <div>
           <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">
-            Refrigeración Industrial Especializada
+            Refrigeración industrial especializada
           </h2>
           <p class="text-lg text-gray-600 mb-6">
             Con décadas de experiencia en frío industrial, diseñamos e instalamos sistemas 
@@ -87,9 +87,9 @@ const industrialSolutions = [
       </div>
 
       <!-- Solutions -->
-      <div class="mb-16">
+      <div class="my-16">
         <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-12">
-          Nuestras Soluciones
+          Nuestras soluciones
         </h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -105,48 +105,40 @@ const industrialSolutions = [
         </div>
       </div>
 
-      <!-- Sectors Section -->
-      <div class="bg-gray-50 rounded-2xl p-12">
+      <!-- Benefits Section -->
+      <div class="bg-primary-50 rounded-2xl p-12">
         <h3 class="text-2xl font-bold text-gray-900 text-center mb-12">Sectores que atendemos</h3>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="text-center">
             <div class="w-16 h-16 bg-primary-200 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-primary-700" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2l3.09 6.26L22 9l-5 4.87L18.18 22 12 18.77 5.82 22 7 13.87 2 9l6.91-.74L12 2z"/>
-              </svg>
+              <Beef className="h-16" />
             </div>
-            <h4 class="font-semibold text-gray-900">Alimentación</h4>
-            <p class="text-sm text-gray-600 mt-2">Conservación de productos frescos y congelados</p>
+            <h4 class="text-lg font-semibold text-gray-900 mb-2">Alimentación</h4>
+            <p class="text-gray-600">Conservación de frescos y congelados</p>
           </div>
           
-          <div>
-            <div class="w-16 h-16 bg-secondary-200 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-secondary-700" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
-              </svg>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-primary-200 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Pill className="h-16" />
             </div>
-            <h4 class="font-semibold text-gray-900">Farmacéutico</h4>
-            <p class="text-sm text-gray-600 mt-2">Medicamentos y productos sanitarios</p>
+            <h4 class="text-lg font-semibold text-gray-900 mb-2">Farmacéutico</h4>
+            <p class="text-gray-600">Medicamentos y productos sanitarios</p>
           </div>
           
-          <div>
-            <div class="w-16 h-16 bg-accent-200 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-accent-700" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2l3.09 6.26L22 9l-5 4.87L18.18 22 12 18.77 5.82 22 7 13.87 2 9l6.91-.74L12 2z"/>
-              </svg>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-primary-200 rounded-full flex items-center justify-center mx-auto mb-4">
+              <ChefHat className="h-16" />
             </div>
-            <h4 class="font-semibold text-gray-900">Hostelería</h4>
-            <p class="text-sm text-gray-600 mt-2">Restaurantes, hoteles y catering</p>
+            <h4 class="text-lg font-semibold text-gray-900 mb-2">Hostelería</h4>
+            <p class="text-gray-600">Restaurantes, hoteles y catering</p>
           </div>
           
-          <div>
-            <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
-              </svg>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-primary-200 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Warehouse className="h-16" />
             </div>
-            <h4 class="font-semibold text-gray-900">Logística</h4>
-            <p class="text-sm text-gray-600 mt-2">Centros de distribución y almacenaje</p>
+            <h4 class="text-lg font-semibold text-gray-900 mb-2">Logística</h4>
+            <p class="text-gray-600">Centros de distribución y almacenaje</p>
           </div>
         </div>
       </div>
@@ -154,7 +146,7 @@ const industrialSolutions = [
   </section>
 
   <!-- Features Section -->
-  <section class="py-20 bg-primary-600 text-white">
+  <section class="py-0 bg-blue-950 text-white">
     <div class="container-width section-padding">
       <h2 class="text-3xl lg:text-4xl font-bold text-center mb-12">
         Características de nuestros sistemas
@@ -163,29 +155,23 @@ const industrialSolutions = [
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="text-center">
           <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2l3.09 6.26L22 9l-5 4.87L18.18 22 12 18.77 5.82 22 7 13.87 2 9l6.91-.74L12 2z"/>
-            </svg>
+            <View className="h-20" />
           </div>
-          <h3 class="text-xl font-bold mb-4">Control Preciso</h3>
+          <h3 class="text-xl font-bold mb-4">Control preciso</h3>
           <p class="opacity-90">Sistemas de control avanzados para mantener temperaturas exactas con mínimas variaciones.</p>
         </div>
         
         <div class="text-center">
           <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
-            </svg>
+            <HousePlug className="h-20" />
           </div>
-          <h3 class="text-xl font-bold mb-4">Eficiencia Energética</h3>
+          <h3 class="text-xl font-bold mb-4">Eficiencia energética</h3>
           <p class="opacity-90">Tecnología inverter y sistemas de alta eficiencia para reducir costes operativos.</p>
         </div>
         
         <div class="text-center">
           <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2l3.09 6.26L22 9l-5 4.87L18.18 22 12 18.77 5.82 22 7 13.87 2 9l6.91-.74L12 2z"/>
-            </svg>
+            <Activity className="h-20" />
           </div>
           <h3 class="text-xl font-bold mb-4">Monitorización 24/7</h3>
           <p class="opacity-90">Sistemas de telemetría para supervisión remota y alertas en tiempo real.</p>
@@ -195,23 +181,47 @@ const industrialSolutions = [
   </section>
 
   <!-- CTA Section -->
-  <section class="py-20 bg-gray-900 text-white">
+  <section class="py-0 bg-gradient-to-b from-blue-950 to-primary-800 text-white">
     <div class="container-width section-padding text-center">
       <h2 class="text-3xl lg:text-4xl font-bold mb-6">
         ¿Necesitas una solución de frío industrial?
       </h2>
       <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-        Cada proyecto es único. Nuestros ingenieros diseñarán la solución perfecta 
-        para tus necesidades específicas de refrigeración.
+        Cada proyecto es único. Nuestros ingenieros diseñarán la solución perfecta para tus necesidades específicas de refrigeración.
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/contacto" class="bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
-          Solicitar Proyecto
+      <div class="flex flex-col sm:flex-row gap-10 justify-center items-center">
+        <a href="/contacto" class="flex gap-2 btn-primary text-lg px-8 py-4 shadow-lg hover:shadow-xl rounded-full">
+          Solicitar proyecto
         </a>
-        <a href="tel:+34XXXXXXXXX" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors">
-          Llamar Ahora
+        <a href="tel:+943458503" class="nav-link btn-primary text-lg px-8 py-0 rounded-full bg-transparent border-none text-white hover:bg-transparent focus:outline-offset-0 focus:outline-none focus:ring-offset-0 focus:ring-0 shadow-none">
+          Llamar ahora
         </a>
       </div>
     </div>
   </section>
 </Layout>
+
+<style>
+.nav-link {
+  @apply hover:text-white flex items-center gap-2 px-1 py-2 transition-colors relative;
+}
+.nav-link:last-child {
+  height: max-content !important;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: theme('colors.white');
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+</style>

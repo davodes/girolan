@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import ServiceCard from '../components/ServiceCard.astro';
-import { AirVent, Heater, Wind, Snowflake } from 'lucide-react';
+import { Wind, Route, Factory, Sparkles, PiggyBank, Droplet } from 'lucide-react';
 
 const ventilationSolutions = [
   {
@@ -13,16 +13,16 @@ const ventilationSolutions = [
     features: ["Recuperación de calor 95%", "Filtración avanzada", "Control automático", "Ahorro energético"]
   },
   {
-    title: "Extracción Localizada",
+    title: "Extracción localizada",
     description: "Sistemas de extracción para cocinas, baños y espacios con alta generación de humedad y olores.",
-    icon: Wind,
+    icon: Route,
     link: "/contacto",
     features: ["Extractores silenciosos", "Sensores automáticos", "Bajo consumo", "Fácil mantenimiento"]
   },
   {
-    title: "Ventilación Industrial",
+    title: "Ventilación industrial",
     description: "Soluciones de ventilación para naves industriales, talleres y espacios comerciales.",
-    icon: Wind,
+    icon: Factory,
     link: "/contacto",
     features: ["Grandes volúmenes", "Sistemas robustos", "Control centralizado", "Cumplimiento normativo"]
   }
@@ -30,19 +30,20 @@ const ventilationSolutions = [
 ---
 
 <Layout 
-  title="Ventilación Madrid | VMC, Extracción, Renovación de Aire | Girolan"
-  description="Sistemas de ventilación en Madrid. VMC doble flujo, extracción localizada y ventilación industrial. Mejora la calidad del aire interior."
+  title="Ventilación en Gipuzkoa | VMC, Extracción, Renovación de Aire | Girolan"
+  description="Sistemas de ventilación en Gipuzkoa. VMC doble flujo, extracción localizada y ventilación industrial. Mejora la calidad del aire interior."
 >
   <Hero 
     title="Sistemas de ventilación"
     subtitle="Aire puro y renovado"
     description="Instalación de sistemas de ventilación mecánica controlada, extracción y renovación de aire. Garantizamos la calidad del aire interior para tu salud y confort."
     image="https://images.pexels.com/photos/6195123/pexels-photo-6195123.jpeg"
+    class="hero-extra"
   />
 
   <!-- Service Details -->
   <section class="py-20 bg-white">
-    <div class="container-width section-padding">
+    <div class="container-width section-padding py-0">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
         <div>
           <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">
@@ -57,19 +58,19 @@ const ventilationSolutions = [
             y fresco mientras recuperan el calor del aire extraído, reduciendo el consumo energético.
           </p>
           
-          <div class="bg-accent-50 rounded-xl p-6">
+          <div class="bg-primary-50 rounded-xl p-6">
             <h3 class="text-xl font-semibold text-gray-900 mb-4">¿Sabías que...?</h3>
             <ul class="space-y-2 text-gray-700">
               <li class="flex items-start space-x-2">
-                <span class="text-accent-600 mt-1">•</span>
-                <span>Pasamos el 90% del tiempo en espacios cerrados</span>
+                <span class="text-primary-600">•</span>
+                <span>Pasamos el ~90% del tiempo en espacios cerrados</span>
               </li>
               <li class="flex items-start space-x-2">
-                <span class="text-accent-600 mt-1">•</span>
+                <span class="text-primary-600">•</span>
                 <span>El aire interior puede estar 5 veces más contaminado que el exterior</span>
               </li>
               <li class="flex items-start space-x-2">
-                <span class="text-accent-600 mt-1">•</span>
+                <span class="text-primary-600">•</span>
                 <span>Una ventilación adecuada mejora la productividad hasta un 15%</span>
               </li>
             </ul>
@@ -89,7 +90,7 @@ const ventilationSolutions = [
       <!-- Solutions -->
       <div class="mb-16">
         <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-12">
-          Soluciones de Ventilación
+          Soluciones de ventilación
         </h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -105,69 +106,80 @@ const ventilationSolutions = [
         </div>
       </div>
 
-      <!-- Benefits Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="text-center p-6 bg-primary-50 rounded-xl">
-          <div class="w-12 h-12 bg-primary-200 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-6 h-6 text-primary-700" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2l3.09 6.26L22 9l-5 4.87L18.18 22 12 18.77 5.82 22 7 13.87 2 9l6.91-.74L12 2z"/>
-            </svg>
+      <!-- Benefits Section -->
+      <div class="bg-primary-50 rounded-2xl p-12">
+        <h3 class="text-2xl font-bold text-gray-900 text-center mb-12">Ventajas de nuestros sistemas</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-primary-200 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Sparkles className="h-16" />
+            </div>
+            <h4 class="text-lg font-semibold text-gray-900 mb-2">Aire limpio</h4>
+            <p class="text-gray-600">Filtración de contaminantes y alérgenos</p>
           </div>
-          <h3 class="font-semibold text-gray-900 mb-2">Aire Limpio</h3>
-          <p class="text-sm text-gray-600">Filtración de contaminantes y alérgenos</p>
-        </div>
-        
-        <div class="text-center p-6 bg-secondary-50 rounded-xl">
-          <div class="w-12 h-12 bg-secondary-200 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-6 h-6 text-secondary-700" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-            </svg>
+          
+          <div class="text-center">
+            <div class="w-16 h-16 bg-primary-200 rounded-full flex items-center justify-center mx-auto mb-4">
+              <PiggyBank className="h-16" />
+            </div>
+            <h4 class="text-lg font-semibold text-gray-900 mb-2">Ahorro energético</h4>
+            <p class="text-gray-600">Recuperación de calor hasta 95%</p>
           </div>
-          <h3 class="font-semibold text-gray-900 mb-2">Ahorro Energético</h3>
-          <p class="text-sm text-gray-600">Recuperación de calor hasta 95%</p>
-        </div>
-        
-        <div class="text-center p-6 bg-accent-50 rounded-xl">
-          <div class="w-12 h-12 bg-accent-200 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-6 h-6 text-accent-700" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2l3.09 6.26L22 9l-5 4.87L18.18 22 12 18.77 5.82 22 7 13.87 2 9l6.91-.74L12 2z"/>
-            </svg>
+          
+          <div class="text-center">
+            <div class="w-16 h-16 bg-primary-200 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Droplet className="h-16" />
+            </div>
+            <h4 class="text-lg font-semibold text-gray-900 mb-2">Control humedad</h4>
+            <p class="text-gray-600">Prevención de mohos y condensaciones</p>
           </div>
-          <h3 class="font-semibold text-gray-900 mb-2">Control Humedad</h3>
-          <p class="text-sm text-gray-600">Prevención de mohos y condensaciones</p>
-        </div>
-        
-        <div class="text-center p-6 bg-gray-50 rounded-xl">
-          <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-6 h-6 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-            </svg>
-          </div>
-          <h3 class="font-semibold text-gray-900 mb-2">Silencioso</h3>
-          <p class="text-sm text-gray-600">Funcionamiento ultrasilencioso</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section class="py-20 bg-accent-600 text-white">
+  <section class="py-0 bg-gradient-to-br from-blue-950 to-primary-700 text-white">
     <div class="container-width section-padding text-center">
       <h2 class="text-3xl lg:text-4xl font-bold mb-6">
         Mejora la calidad del aire de tu hogar
       </h2>
       <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-        Un sistema de ventilación adecuado es una inversión en salud. 
-        Solicita tu estudio personalizado sin compromiso.
+        Un sistema de ventilación adecuado es una inversión en salud. Solicita tu estudio personalizado sin compromiso.
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/contacto" class="bg-white text-accent-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-          Solicitar Estudio
+      <div class="flex flex-col sm:flex-row gap-10 justify-center items-center">
+        <a href="/contacto" class="flex gap-2 btn-primary text-lg px-8 py-4 shadow-lg hover:shadow-xl rounded-full">
+          Solicitar estudio gratuito
         </a>
-        <a href="tel:+34XXXXXXXXX" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-accent-600 transition-colors">
-          Llamar Ahora
+        <a href="tel:+943458503" class="nav-link btn-primary text-lg px-8 py-0 rounded-full bg-transparent border-none text-white hover:bg-transparent focus:outline-offset-0 focus:outline-none focus:ring-offset-0 focus:ring-0 shadow-none">
+          Llamar ahora
         </a>
       </div>
     </div>
   </section>
 </Layout>
+
+<style>
+.nav-link {
+  @apply hover:text-white flex items-center gap-2 px-1 py-2 transition-colors relative;
+}
+.nav-link:last-child {
+  height: max-content !important;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: theme('colors.white');
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+</style>

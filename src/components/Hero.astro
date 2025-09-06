@@ -5,14 +5,15 @@ interface Props {
   description: string;
   image?: string;
   showCTA?: boolean;
+  class?: string;
 }
 
 import { CircleChevronRight } from 'lucide-react';
 
-const { title, subtitle, description, image = "https://images.pexels.com/photos/2539462/pexels-photo-2539462.jpeg", showCTA = true } = Astro.props;
+const { title, subtitle, description, showCTA, class: extraClass = true } = Astro.props;
 ---
 
-<section id="hero" class="relative min-h-[80vh] pt-12 flex items-center justify-center overflow-hidden">
+<section id="hero" class={`relative min-h-[80vh] pt-12 flex items-center justify-center overflow-hidden ${extraClass ?? ''}`}>
   <div class="absolute inset-0 bg-gradient-to-br from-blue-950 to-primary-700"></div>
   
   <!-- Animated Background Elements -->
@@ -78,5 +79,9 @@ const { title, subtitle, description, image = "https://images.pexels.com/photos/
 
 .nav-link:hover::after {
   width: 100%;
+}
+:global(.hero-extra) {
+  min-height: 60vh !important;
+  padding-top: 6rem;
 }
 </style>

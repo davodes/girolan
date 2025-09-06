@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
+import ClientsCarousel from "../components/ClientsCarousel.jsx";
 
 const testimonials = [
   {
@@ -54,34 +55,36 @@ const testimonials = [
 ];
 
 const clients = [
-  "Hotel Majestic", "Laboratorios Farmacéuticos SL", "Centro Comercial Plaza Norte",
-  "Restaurante El Parador", "Oficinas ABC", "Hospital San Rafael", 
-  "Universidad Complutense", "Supermercados Frescos", "Clínica Dental Sonrisa",
-  "Gimnasio Fitness Plus", "Colegio Santa María", "Residencia Geriátrica Los Olivos"
+  { name: "ArcelorMittal", svg: '/svgs/arcelor.svg' },
+  { name: "Ayuntamiento Lasarte", svg: '/svgs/LogoLasarte-Oria.png' },
+  { name: "Ayuntamiento San Sebastián", svg: '/svgs/ayuntamiento-san-sebastian-logo-vector-450x220.jpg' },
+  { name: "DHL", svg: '/svgs/dhl.svg' },
+  { name: "Fagor", svg: '/svgs/fagor.svg' },
 ];
 ---
 
 <Layout 
-  title="Testimonios de Clientes | Opiniones Reales Girolan"
-  description="Descubre lo que opinan nuestros clientes sobre nuestros servicios de climatización. Testimonios reales de proyectos de aire acondicionado, calefacción y ventilación en Madrid."
+  title="Testimonios de clientes | Opiniones reales Girolan"
+  description="Descubre lo que opinan nuestros clientes sobre nuestros servicios de climatización. Testimonios reales de proyectos de aire acondicionado, calefacción y ventilación en Gipuzkoa."
 >
   <Hero 
-    title="Nuestros Clientes Opinan"
+    title="Nuestros clientes opinan"
     subtitle="Testimonios reales"
     description="La satisfacción de nuestros clientes es nuestro mejor aval. Descubre las experiencias reales de quienes han confiado en nosotros para sus proyectos de climatización."
     image="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg"
     showCTA={false}
+    class="hero-extra"
   />
 
   <!-- Testimonials Section -->
   <section class="py-20 bg-white">
-    <div class="container-width section-padding">
+    <div class="container-width section-padding py-0">
       <div class="text-center mb-16">
         <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-          Testimonios de Clientes
+          Testimonios de clientes
         </h2>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Más de 20 años de experiencia nos avalan. Lee las opiniones reales de nuestros clientes 
+          Más de 35 años de experiencia nos avalan. Lee las opiniones reales de nuestros clientes 
           y descubre por qué somos la opción preferida en climatización.
         </p>
       </div>
@@ -125,7 +128,7 @@ const clients = [
 
   <!-- Stats Section -->
   <section class="py-20 bg-primary-600 text-white">
-    <div class="container-width section-padding">
+    <div class="container-width section-padding py-6">
       <div class="text-center mb-16">
         <h2 class="text-3xl lg:text-4xl font-bold mb-6">
           Números que nos avalan
@@ -137,17 +140,17 @@ const clients = [
       
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
         <div>
-          <div class="text-4xl lg:text-5xl font-bold mb-2">98%</div>
+          <div class="text-4xl lg:text-5xl font-bold mb-2">99%</div>
           <div class="text-lg opacity-90">Satisfacción del cliente</div>
         </div>
         
         <div>
-          <div class="text-4xl lg:text-5xl font-bold mb-2">500+</div>
+          <div class="text-4xl lg:text-5xl font-bold mb-2">+500</div>
           <div class="text-lg opacity-90">Proyectos completados</div>
         </div>
         
         <div>
-          <div class="text-4xl lg:text-5xl font-bold mb-2">95%</div>
+          <div class="text-4xl lg:text-5xl font-bold mb-2">±60%</div>
           <div class="text-lg opacity-90">Clientes que repiten</div>
         </div>
         
@@ -161,29 +164,30 @@ const clients = [
 
   <!-- Clients List -->
   <section class="py-20 bg-gray-50">
-    <div class="container-width section-padding">
+    <div class="container-width section-padding py-0">
       <div class="text-center mb-16">
         <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-          Confían en Nosotros
+          Confían en nosotros
         </h2>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto">
           Una amplia cartera de clientes satisfechos en diversos sectores: hostelería, 
           sanidad, educación, industria y residencial.
         </p>
       </div>
+      <ClientsCarousel client:load clients={clients} />
 
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {clients.map((client) => (
           <div class="bg-white rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-shadow">
             <h3 class="font-semibold text-gray-900">{client}</h3>
           </div>
         ))}
-      </div>
+      </div> -->
     </div>
   </section>
 
   <!-- Guarantee Section -->
-  <section class="py-20 bg-white">
+  <!-- <section class="py-20 bg-white">
     <div class="container-width section-padding">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
@@ -250,26 +254,56 @@ const clients = [
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- CTA Section -->
-  <section class="py-20 bg-secondary-600 text-white">
+  <section class="py-0 bg-gradient-to-br from-blue-950 to-primary-700 text-white">
     <div class="container-width section-padding text-center">
       <h2 class="text-3xl lg:text-4xl font-bold mb-6">
         Únete a nuestros clientes satisfechos
       </h2>
       <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-        Más de 500 clientes han confiado en nosotros. ¿Serás el próximo en disfrutar 
-        de un servicio excepcional de climatización?
+        Más de 500 clientes han confiado en nosotros. ¿Serás el próximo en disfrutar de un servicio excepcional de climatización?
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/contacto" class="bg-white text-secondary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-          Solicitar Presupuesto
+      <div class="flex flex-col sm:flex-row gap-10 justify-center items-center">
+        <a href="/contacto" class="flex gap-2 btn-primary text-lg px-8 py-4 shadow-lg hover:shadow-xl rounded-full">
+          Solicitar presupuesto
         </a>
-        <a href="tel:+34XXXXXXXXX" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-secondary-600 transition-colors">
-          Llamar Ahora
+        <a href="tel:+943458503" class="nav-link btn-secondary text-lg px-8 py-0 rounded-full bg-transparent border-none text-white hover:bg-transparent focus:outline-offset-0 focus:outline-none focus:ring-offset-0 focus:ring-0 shadow-none">
+          Llamar ahora
         </a>
       </div>
     </div>
   </section>
 </Layout>
+
+<style>
+.nav-link {
+  @apply hover:text-white flex items-center gap-2 px-1 py-2 transition-colors relative;
+}
+.nav-link:last-child {
+  height: max-content !important;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: theme('colors.white');
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+:global(.imagen) {
+  mix-blend-mode: multiply !important;
+}
+:global(.keen-slider__slide) {
+  background-color: #f9fafb ;
+}
+</style>
